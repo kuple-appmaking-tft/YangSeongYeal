@@ -52,19 +52,19 @@ public class SliderAdapterExample extends
 
         SliderItem sliderItem = mSliderItems.get(position);
 
-        viewHolder.textViewDescription.setText(sliderItem.getDescription());
-        viewHolder.textViewDescription.setTextSize(16);
-        viewHolder.textViewDescription.setTextColor(Color.WHITE);
+        //viewHolder.textViewDescription.setText(sliderItem.getDescription());
+        //viewHolder.textViewDescription.setTextSize(16);
+       // viewHolder.textViewDescription.setTextColor(Color.WHITE);
         Glide.with(viewHolder.itemView)
                 .load(sliderItem.getImageUrl())
                 .into(viewHolder.imageViewBackground);
 
-        viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+        /*viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(context, "This is item in position " + position, Toast.LENGTH_SHORT).show();
             }
-        });
+        })*/;
     }
 
     @Override
@@ -78,13 +78,13 @@ public class SliderAdapterExample extends
         View itemView;
         ImageView imageViewBackground;
         ImageView imageGifContainer;
-        TextView textViewDescription;
+       // TextView textViewDescription;
 
         public SliderAdapterVH(View itemView) {
             super(itemView);
             imageViewBackground = itemView.findViewById(R.id.iv_auto_image_slider);
             imageGifContainer = itemView.findViewById(R.id.iv_gif_container);
-            textViewDescription = itemView.findViewById(R.id.tv_auto_image_slider);
+            //textViewDescription = itemView.findViewById(R.id.tv_auto_image_slider);
             this.itemView = itemView;
         }
     }
