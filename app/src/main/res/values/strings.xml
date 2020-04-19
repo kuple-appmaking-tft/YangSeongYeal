@@ -6,4 +6,11 @@
     <string name="passingimg">img</string>
     <string name="good">0</string>
     <string name="bed">0</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="contents">Contents</string>
+    <string name="title">Title</string>
+    <string name="todo">TODO</string>
+    <string name="writeTheTitle">글쓰기</string>
 </resources>

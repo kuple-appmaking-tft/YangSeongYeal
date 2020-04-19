@@ -1,36 +1,25 @@
 package com.example.kupleapp;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Html;
-import android.text.Spannable;
-import android.text.SpannableString;
-import android.text.style.UnderlineSpan;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.kupleapp.Model.SliderItem;
-import com.google.android.material.tabs.TabLayout;
 import com.like.LikeButton;
-import com.like.OnAnimationEndListener;
 import com.like.OnLikeListener;
 import com.smarteist.autoimageslider.IndicatorAnimations;
 import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderView;
 
-import java.util.ArrayList;
-import java.util.List;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
 
-public class MainActivity extends AppCompatActivity  {
-    ImageButton go;
     LikeButton likeButton;
     LikeButton dislikeButton;
     SliderView sliderView;
@@ -45,16 +34,14 @@ public class MainActivity extends AppCompatActivity  {
        // TextView.setText(Html.fromHtml(getResources.getString(R.string.whree)));
 
 
+        //뒤로가기버튼튼
+      findViewById(R.id.imageButton1).setOnClickListener(this);
+        //플로팅버튼
+        findViewById(R.id.float_btn).setOnClickListener(this);
 
-        go=findViewById(R.id.imageButton1);
 
-        go.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this,SecondActivity.class);
-                startActivity(intent);
-            }
-        });
+
+
         /////////////이미지 슬라이딩
         sliderView = findViewById(R.id.imageSlider);
 
@@ -86,6 +73,7 @@ public class MainActivity extends AppCompatActivity  {
         TextView t1=(TextView)findViewById(R.id.nameOfsub);
         t1.setText(Html.fromHtml("<b>가나다라마바사아자차카파하가나다라</b>"));
         ////좋아요버튼
+
         //버튼클릭하면 실행
 
 
@@ -127,7 +115,20 @@ public class MainActivity extends AppCompatActivity  {
 
     }
 
+//클릭했을때
+    @Override
+    public void onClick(View v) {
 
+        int id = v.getId();
+        switch (id) {
+            case R.id.imageButton1:
 
+                startActivity(new Intent(this,SecondActivity.class));
+                break;
+            case R.id.float_btn:
+                startActivity(new Intent(this, MakingpageActivity.class));
+                break;
 
+        }
+    }
 }

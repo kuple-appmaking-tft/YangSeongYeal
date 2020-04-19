@@ -58,7 +58,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="50dp" />
+        app:layout_constraintGuide_begin="32dp" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -101,7 +101,7 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
+    <!--데이터베이스에 들어가야하는 이미지들-->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -174,11 +174,12 @@
                     android:paddingBottom="5dp"
 
                     android:text="@string/bed"
-                    android:textSize="15dp"
+                    android:textSize="15sp"
                     app:layout_constraintBottom_toTopOf="@+id/guideline"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toEndOf="@+id/thumb_down" />
+                    app:layout_constraintStart_toEndOf="@+id/thumb_down"
+                    android:paddingStart="10dp" />
 
                 <TextView
 
@@ -263,7 +264,8 @@
                     app:is_enabled="true"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:liked="false">
+                    app:liked="false"
+                    >
 
                 </com.like.LikeButton>
 
@@ -278,18 +280,34 @@
                     android:paddingBottom="5dp"
                     android:text="@string/good"
 
-                    android:textSize="15dp"
+                    android:textSize="15sp"
                     app:layout_constraintBottom_toTopOf="@+id/guideline"
                     app:layout_constraintEnd_toStartOf="@+id/thumb_down"
                     app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toEndOf="@+id/thumb_up" />
+                    app:layout_constraintStart_toEndOf="@+id/thumb_up"
+                    android:paddingStart="10dp" />
+
+
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+
         </LinearLayout>
 
 
     </ScrollView>
+    <!--데이터베이스에 들어가야하는 이미지들-->
+
+    <!--플로팅 버튼-->
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/float_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_write"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
